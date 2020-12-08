@@ -12,9 +12,28 @@
                     <i class="fad fa-link"></i>
                 </a>
             </h2>
+            <ul>
             {{ range $id, $e := .entry }}
-                <li>{{ .name }}({{ .status }}):{{ .comment }}</li>
+                <li>
+                    <span class="bangumi btn">{{ .name }}</span> 
+                    {{- if isset . "rate" -}}
+                        [{{ .rate }}]
+                    {{- end -}}
+                    {{- if isset . "tags" -}}
+                        [{{ .tags }}]
+                    {{- end -}}
+                    {{- if isset . "staff" -}}
+                        [{{ .staff }}]
+                    {{- end -}}
+
+                    <li class="li-no-style indent">
+                        {{- if isset . "comment" -}}
+                            {{ .comment }}
+                        {{- end -}}
+                    </li>
+                </li>
             {{ end }}
+            </ul>
         {{ end }}
     </div>
 

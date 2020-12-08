@@ -3,6 +3,7 @@
 <body class="app auto flex-container">
     <div class="flex-container flex-column">
         {{- partial "nav.html" . -}}
+        <div class="no-bottom-margin">{{ .Content }}</div>
         <div class='general-div'>
             <ul>
             {{ range .Pages }}

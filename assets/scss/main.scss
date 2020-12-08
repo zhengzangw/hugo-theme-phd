@@ -124,7 +124,7 @@ pre code {
 }
 
 .flex-column-20 {
-    flex: 20%;
+    flex: 15%;
 }
 
 .flex-column-80 {
@@ -175,8 +175,18 @@ pre code {
 
 /* general */
 
+.indent {
+    margin-left: 40px;
+}
+
 .no-top-margin {
     margin-top: 0px;
+}
+
+.no-bottom-margin {
+    p {
+        margin-bottom: 0px;
+    }
 }
 
 .btn {
@@ -203,6 +213,13 @@ pre code {
 
 /* specific */
 
+.return+#TableOfContents {
+    margin-top: 0px;
+    ul {
+        margin-block-start: 0px;
+    }
+}
+
 .avator {
     img {
         animation: animated-border 1.5s infinite;
@@ -222,6 +239,17 @@ pre code {
     }
 }
 
+.bangumi {
+    font-weight: lighter;
+    border: 1px solid var(--shade-4);
+    margin: 1px;
+    padding: 1px;
+    color: var(--primary-darker);
+    &:hover {
+        color: var(--secondary)
+    }
+}
+
 #Publications,
 #Teaching-Assistant {
     li {
@@ -234,3 +262,8 @@ pre code {
 #cvcard {
     margin-bottom: 3vh;
 }
+
+
+/* markdown */
+
+@import "markdown.scss";
