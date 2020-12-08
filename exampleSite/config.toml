@@ -1,0 +1,45 @@
+baseURL = "/"
+languageCode = "en-us"
+theme = "hugo-theme-phd"
+title = "TITLE"
+
+[params]
+avatar = "/avatar.jpg"
+
+[author]
+address = "Department of Computer Science and Technology, <br> Nanjing University, China"
+email = "zzw at smail.nju.edu.cn"
+name = "Zangwei Zheng"
+name_ch = "中文名"
+title = "PhD"
+github = "[zhengzangw](https://github.com/zhengzangw)"
+
+[menus]
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 1
+[[menu.main]]
+name = "CV"
+url = "/pdfs/resume.pdf"
+weight = 2
+[[menu.main]]
+name = "Teaching"
+url = "/teach"
+weight = 3
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 4
+[[menu.main]]
+name = "Notes"
+url = "/notes"
+weight = 5
+[[menu.main]]
+name = "Resources"
+url = "/resource"
+weight = 6
+[[menu.main]]
+name = "Friends"
+url = "/friends"
+weight = 7

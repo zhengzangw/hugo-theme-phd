@@ -1,0 +1,15 @@
+{{- partial "header.html" . -}}
+
+<body class="app auto flex-container">
+    <div class="flex-container flex-column">
+        {{- partial "nav.html" . -}}
+
+        <div class="flex-passage flex-row flex-row-full">
+            <div class="flex-column-20">{{ .TableOfContents }}</div>
+            <main class="flex-column-80">{{ .Content }}</main>
+        </div>
+
+    </div>
+</body>
+
+{{- partial "footer.html" . -}}

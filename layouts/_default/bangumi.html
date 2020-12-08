@@ -1,0 +1,23 @@
+{{- partial "header.html" . -}}
+
+<body class="app auto flex-container">
+    <div class="flex-container flex-column">
+        {{- partial "nav.html" . -}}
+    <div>{{.Content}}</div>
+    <div class="general-div">
+        {{ range .Params.year }}
+            <h2 id="{{ .year }}">
+                {{ .year }}
+                <a href="#{{ .year }}" class="anchor" aria-hidden="true">
+                    <i class="fad fa-link"></i>
+                </a>
+            </h2>
+            {{ range $id, $e := .entry }}
+                <li>{{ .name }}({{ .status }}):{{ .comment }}</li>
+            {{ end }}
+        {{ end }}
+    </div>
+
+</body>
+
+{{- partial "footer.html" . -}}

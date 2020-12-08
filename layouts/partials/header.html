@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ site.Title }}</title>
+
+    {{ $scss:= resources.Get "scss/main.scss" | resources.ToCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ relURL $scss.Permalink }}" integity="{{$scss.Data.Integrity}}">
+
+    <script type="text/javascript" src="{{ "/js/dark.js" | relURL }}"></script>
+    {{- partial "mathjax.html" . -}}
+</head>

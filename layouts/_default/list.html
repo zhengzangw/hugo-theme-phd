@@ -1,0 +1,20 @@
+{{- partial "header.html" . -}}
+
+<body class="app auto flex-container">
+    <div class="flex-container flex-column">
+        {{- partial "nav.html" . -}}
+        <div class='general-div'>
+            <ul>
+            {{ range .Pages }}
+                <li>
+                    <a href="{{ .RelPermalink }}">
+                        {{ .Title | markdownify }}
+                    </a>
+                </li>
+            {{ end }}
+            </ul>
+        </div>
+   </div>
+</body>
+
+{{- partial "footer.html" . -}}

@@ -1,0 +1,28 @@
+{{- partial "header.html" . -}}
+
+<body class="app auto flex-container">
+    <div class="flex-container flex-column">
+        {{- partial "nav.html" . -}} 
+        <div>
+            {{ .Content }}
+        </div>
+        <div class='general-div'>
+        <ul>
+            {{ range .Params.Friends }}
+            <li class="friends-item li-no-style">
+                <a target="_blank" href="{{ .url }}">
+                    {{ with .icon }}
+                        <img class="avatar-sm mr-2" src="/images/friends/{{ . }}" />
+                    {{- end -}} 
+                    {{- .name -}}'s Blog
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        </div>
+        
+
+    </div>
+</body>
+
+{{- partial "footer.html" . -}}

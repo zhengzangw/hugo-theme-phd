@@ -1,0 +1,24 @@
+ {{- partial "header.html" . -}}
+
+<body class="app auto flex-container">
+    <div class="flex-container flex-column">
+        {{- partial "cvcard.html" . -}}
+        {{- partial "nav.html" . -}} 
+        {{ with site.GetPage "/about" }}
+            <div>
+                {{ range .Pages.ByWeight }}
+                <div id={{ .Title | replaceRE " " "-"}}>
+                    <h2 class="about-title">
+                        <a class="raw-a" href="#{{ .Title | replaceRE " " "-"}}">{{ .Title | markdownify }} </a>
+                    </h2>
+                    <div class="about-div">
+                        {{ .Content }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</body>
+
+{{- partial "footer.html" . -}}

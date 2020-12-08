@@ -1,0 +1,14 @@
+<nav>
+    <hr>
+    <div class="flex-container flex-row flex-row-full">
+        {{ range site.Menus.main }}
+        <div class="nav-item">
+            <a href="{{ .URL | relURL }}">[ {{ .Name }} ]</a>
+        </div>
+        {{ end }}
+        <div class="nav-item btn btn-switch">
+            <a>[ <span class="theme-name">Auto</span> ]</a>
+        </div>
+    </div>
+    <hr>
+</nav>

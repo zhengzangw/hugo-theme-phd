@@ -1,0 +1,36 @@
+<div id="cvcard" class='flex-container flex-row flex-row-full'>
+    <div class='item-two-column avator flex-container'>
+        <img src="{{ site.Params.avatar }}">
+    </div>
+    <div class='item-two-column flex-container'>
+        <div>
+            <br>
+            <div class='no-top-margin name-title'>
+                <h1>
+                    {{- site.Author.name | markdownify -}} 
+                </h1>
+                {{- if isset site.Author "name_ch" -}}
+                <h1> 
+                    {{- site.Author.name_ch | markdownify -}}
+                </h1>
+                {{- end -}}
+            </div>
+            <div>{{ site.Author.title }}</div>
+            <br>
+            <div>{{ site.Author.address | markdownify }}</div>
+            {{- if isset site.Author "email" -}}
+                <br> 
+                <b>Email:</b> {{site.Author.email | markdownify }}
+            {{- end -}}
+            {{- if isset site.Author "office" -}}
+                <br> 
+                <b>Office</b>: {{site.Author.office | markdownify }}
+            {{- end -}}
+            {{- if isset site.Author "github" -}}
+                <br> 
+                <b>Github</b>: {{site.Author.github | markdownify }}
+            {{- end -}}
+            <br>
+        </div>
+    </div>
+</div>
