@@ -17,7 +17,7 @@
                 <li>
                     <span class="bangumi btn">{{ .name }}</span> 
                     {{- if isset . "rate" -}}
-                        [{{ .rate }}]
+                        [<span class="bangumi-rate">{{ .rate }}</span>]
                     {{- end -}}
                     {{- if isset . "tags" -}}
                         [{{ .tags }}]
