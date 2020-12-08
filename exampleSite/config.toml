@@ -7,12 +7,12 @@ title = "TITLE"
 avatar = "/avatar.jpg"
 
 [author]
-address = "Department of Computer Science and Technology, <br> Nanjing University, China"
-email = "zzw at smail.nju.edu.cn"
-name = "Zangwei Zheng"
+address = ["address1", "address2"]
+email = "yourname at google.com"
+github = ""
+name = "English Name"
 name_ch = "中文名"
 title = "PhD"
-github = "[zhengzangw](https://github.com/zhengzangw)"
 
 [menus]
 [[menu.main]]
